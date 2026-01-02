@@ -1,0 +1,14 @@
+version: '3'
+
+tasks:
+  run:
+    desc: Run the Streamlit app
+    cmd: uv run streamlit run main.py
+
+  install:
+    desc: Install dependencies
+    cmd: uv sync
+
+  add-dep:
+    desc: Add a new dependency
+    cmd: uv add {{.CLI_ARGS}}
